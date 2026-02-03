@@ -1,0 +1,276 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIÁVEIS */
+:root {
+    --background: #F4EFE9;
+    --primary: #8F475B;
+    --dark: #2b2b2b;
+    --light: #ffffff;
+}
+
+/* GLOBAL */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADER */
+.header {
+    background: var(--background);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    color: var(--primary);
+    font-size: 1.5rem;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+}
+
+/* HERO 
+.hero {
+    height: 80vh;
+    background:
+        linear-gradient(
+            rgba(143, 71, 91, 0.75),
+            rgba(143, 71, 91, 0.75)
+        ),
+        url("../images/capa_1.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color: var(--light);
+}*/
+
+/* HERO */
+.hero {
+    height: 80vh;
+    background:
+        linear-gradient(
+            rgba(143, 71, 91, 0.78),
+            rgba(143, 71, 91, 0.78)
+        ),
+        url("../images/marca_dagua_1.png") center/contain no-repeat,
+        #8F475B;
+    display: flex;
+    align-items: center;
+    color: var(--light);
+    position: relative;
+}
+
+
+.hero-content {
+    max-width: 520px;
+    margin-left: 5%;
+}
+
+.hero-subtitle {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* LOGO NO HERO */
+.hero-logo {
+    max-width: 320px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+/* BOTÃO ESPECÍFICO DO HERO */
+.btn-hero {
+    background: #F4EFE9;      /* bege claro */
+    color: #8F475B;           /* cor institucional */
+    border: 2px solid #F4EFE9;
+}
+
+
+/* BOTÃO */
+.btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.75rem 1.8rem;
+    background: var(--primary);
+    color: var(--light);
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* SEÇÕES */
+.section {
+    padding: 4rem 0;
+}
+
+/* CARDS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+.footer {
+    background: var(--primary);
+    color: var(--light);
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* SOBRE */
+.sobre-container {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.sobre-img img {
+    width: 280px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.sobre-texto {
+    flex: 1;
+}
+
+.crefito {
+    margin-top: 1rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* RESPONSIVO SOBRE */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-img img {
+        width: 220px;
+    }
+}
+
+/* ENDEREÇO */
+.endereco {
+    background: var(--light);
+}
+
+.endereco-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.mapa {
+    flex: 1.5;
+}
+
+.endereco-texto {
+    flex: 1;
+    font-size: 1.1rem;
+}
+
+.endereco-texto h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* RESPONSIVO ENDEREÇO */
+@media (max-width: 768px) {
+    .endereco-container {
+        flex-direction: column;
+    }
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .nav.active {
+        display: block;
+        position: absolute;
+        top: 70px;
+        right: 5%;
+        background: var(--background);
+        padding: 1rem;
+        border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero-logo {
+        max-width: 240px;
+    }
+}
