@@ -81,7 +81,7 @@ body {
     color: var(--light);
 }*/
 
-/* HERO */
+/* HERO 
 .hero {
     height: 80vh;
     background:
@@ -95,8 +95,63 @@ body {
     align-items: center;
     color: var(--light);
     position: relative;
+} */
+
+/*..novo */
+/* HERO */
+.hero {
+    height: 80vh;
+    background: #8F475B;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--light);
+    overflow: hidden;
 }
 
+/* OVERLAY */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(143, 71, 91, 0.78);
+    z-index: 1;
+}
+
+/* MARCA D'ÁGUA */
+.hero-watermark {
+    position: absolute;
+    inset: 5px; /* margem REAL de 5px em todos os lados */
+    background: url("../images/marca_dagua_1.png") center/contain no-repeat;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* CONTEÚDO */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+    margin-left: 5%;
+}
+
+.hero-subtitle {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* BOTÃO HERO */
+.btn-hero {
+    
+    background: transparent;
+    color: #8F475B;
+    border: 2px solid #F4EFE9;
+    font-weight: bold;
+}
+
+
+/*..novo
 
 .hero-content {
     max-width: 520px;
@@ -107,7 +162,7 @@ body {
     font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 1rem;
-}
+} */
 
 .hero h2 {
     font-size: 2.5rem;
@@ -121,13 +176,13 @@ body {
     margin-bottom: 1.5rem;
 }
 
-/* BOTÃO ESPECÍFICO DO HERO */
+/* BOTÃO ESPECÍFICO DO HERO 
 .btn-hero {
-    background: #F4EFE9;      /* bege claro */
-    color: #8F475B;           /* cor institucional */
+    background: #F4EFE9;     
+    color: #8F475B;          
     border: 2px solid #F4EFE9;
 }
-
+*/
 
 /* BOTÃO */
 .btn {
